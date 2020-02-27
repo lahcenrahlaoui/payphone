@@ -1,0 +1,26 @@
+.ringindicator{
+	-fx-ring-width: 6.0;
+	-fx-inner-radius: 12.0;
+}
+.ringindicator-inner-circle {
+	-fx-opacity: 0.55;
+	-fx-stroke: circleindicator-color; 
+	-fx-stroke-width: 1.5px;
+	-fx-fill: -fx-background;
+}
+.ringindicator-filler {
+	-fx-stroke: circleindicator-color; 
+	-fx-fill: -fx-background;
+	-fx-stroke-line-cap: butt;
+}
+.ringindicator-outer-circle-secondary {
+	-fx-opacity: 0.1;
+	-fx-stroke: circleindicator-color; 
+	-fx-stroke-width: 2.0px;
+	-fx-fill: -fx-background;
+
+}
+.indeterminate {
+	-fx-opacity: 0.55;
+	-fx-stroke: linear-gradient(from 0.0% 0.0% to 70.0% 70.0%, circleindicator-color 70.0%, red 7.0%, white);
+}

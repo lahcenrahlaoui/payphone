@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="29e99f86-f667-4bba-bc16-09a8e439dec2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/taxi_phone/taxi_phone1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taxi_phone1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/taxi_phone/META-INF/taxi_phone.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/taxi_phone/sample/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/taxi_phone/sample/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/taxi_phone/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/taxi_phone/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/taxi_phone/sample/Free.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/taxi_phone/sample/Free.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/taxi_phone/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/taxi_phone/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/taxi_phone/sample/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/taxi_phone/sample/Point.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/taxi_phone/sample/client.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/taxi_phone/sample/client.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/taxi_phone/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/taxi_phone/sample/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/client.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/client.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxi_phone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/taxi_phone.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxi_phone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/taxi_phone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxi_phone/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/taxi_phone/src/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxi_phone/src/sample/client.png" beforeDir="false" afterPath="$PROJECT_DIR$/taxi_phone/src/sample/client.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taxi_phone/taxi_phone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/taxi_phone/taxi_phone.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1VrEAPWDsD3aKJRUQvR8XALghbI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample.Main" />
+      <module name="taxi_phone1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29e99f86-f667-4bba-bc16-09a8e439dec2" name="Default Changelist" comment="" />
+      <created>1578002669675</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578002669675</updated>
+      <workItem from="1578002676449" duration="24788000" />
+      <workItem from="1578052154831" duration="1949000" />
+      <workItem from="1578060384499" duration="6405000" />
+      <workItem from="1578069919020" duration="46402000" />
+      <workItem from="1578148485588" duration="185000" />
+      <workItem from="1578157737835" duration="164000" />
+      <workItem from="1578158701556" duration="3339000" />
+      <workItem from="1578167644883" duration="2180000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="26" key="#Inspections" timestamp="1578031217759">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="26" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1578031217759" />
+    <state x="413" y="115" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1578118375573">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="115" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1578118375573" />
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1578173973457">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578173973457" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1578173973457">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578173973457" />
+    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1578173973456">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578173973456" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1578173973457">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578173973457" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1578147173710">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578147173710" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1578147173709">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1578147173709" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1578147173709">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1578147173709" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1578147173710">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1578147173710" />
+    <state x="277" y="304" width="1040" height="424" key="SettingsEditor" timestamp="1578070877739">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="277" y="304" width="1040" height="424" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1578070877739" />
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1578167703621">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1578167703621" />
+    <state x="494" y="284" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578108473535">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="494" y="284" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1578108473535" />
+    <state x="300" y="276" key="extract.method.dialog" timestamp="1578012677279">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="300" y="276" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1578012677279" />
+    <state x="65" y="73" key="new project wizard" timestamp="1578075320516">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="73" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1578075320516" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1578104575632">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1578104575632" />
+  </component>
+</project>

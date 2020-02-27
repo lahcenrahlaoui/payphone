@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="btnClient" layoutX="853.0" layoutY="32.0" mnemonicParsing="false" onAction="#onClickAddClient" prefHeight="42.0" prefWidth="103.0" text="Add Client" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Spinner fx:id="callDuration" layoutX="853.0" layoutY="86.0" prefHeight="42.0" prefWidth="103.0" />
+   </children>
+</AnchorPane>
