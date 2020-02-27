@@ -1,0 +1,311 @@
+package sample;
+
+import com.jfoenix.controls.JFXTabPane;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.Spinner;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+
+import java.net.URL;
+import java.util.Random;
+import java.util.ResourceBundle;
+
+import static sample.Main.*;
+
+public class Controller implements Initializable {
+
+
+    @FXML
+    AnchorPane anchorPane = new AnchorPane();
+    ImageView cashier = new ImageView(new Image("@../images/others/cashief.png"));
+    Pane pane = new Pane();
+    Button btnClientAdd5 = new Button("Add 5 Client");
+    Button btnClientAdd1 = new Button("Add Client");
+    Button btnClientRandomTime = new Button("Add");
+    Spinner spinner = new Spinner();
+
+
+    void d() {
+        btnClientAdd1.setLayoutX(313);
+        btnClientAdd1.setLayoutY(17);
+        btnClientAdd1.setPrefSize(42,105);
+        btnClientAdd1.setOnMouseClicked( e-> {
+            try {
+                onClickAddClient();
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
+        });
+        btnClientAdd5.setLayoutX(103);
+        btnClientAdd5.setLayoutY(17);
+        btnClientAdd5.setPrefSize(42,105);
+        btnClientAdd5.setOnMouseClicked( e-> {
+            try {
+                onClick5AddClient();
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
+        });
+        btnClientRandomTime.setLayoutX(208);
+        btnClientRandomTime.setLayoutY(176);
+        btnClientRandomTime.setPrefSize(42,105);
+        btnClientRandomTime.setOnMouseClicked( e-> {
+            try {
+                onClickAddClientRandomTime();
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
+        });
+        
+    }
+
+
+
+
+
+
+    @FXML
+    private Spinner<Integer> callDurationValue;
+
+    @FXML
+    private int callDuration ;
+
+    @FXML
+    public  Label revenue;
+
+
+
+    @FXML
+    public static JFXTabPane dada;
+
+    @FXML
+    public static Pane pane ;
+
+
+    private  int callDurationSelected ;
+
+
+
+    public static boolean X[] = {false , false, false , false ,false , false, false , false } ;
+    public static boolean Y[] = {false , false, false , false ,false } ;
+
+        void changeCabineStatut(ImageView imgD , ImageView imgA , int i){
+              if (X[i] == false) {
+                  X[i] = true ;
+                  Platform.runLater(() -> {
+                              Main.root.getChildren().remove(imgD);
+                              Main.root.getChildren().add(imgA);
+                          }
+                  );
+              } else {
+                  X[i] = false;
+                  Platform.runLater(() -> {
+                              Main.root.getChildren().remove(imgA);
+                              Main.root.getChildren().add(imgD);
+                          }
+                  );
+              }
+        }
+
+
+    void changeChaireStatut(ImageView imgD , ImageView imgA , int i){
+        if (Y[i] == false) {
+            Y[i] = true ;
+            Platform.runLater(() -> {
+                        Main.root.getChildren().remove(imgD);
+                        Main.root.getChildren().add(imgA);
+                    }
+            );
+
+        } else {
+            Y[i] = false;
+            Platform.runLater(() -> {
+                        Main.root.getChildren().remove(imgA);
+                        Main.root.getChildren().add(imgD);
+                    }
+            );
+        }
+    }
+
+    public  int getcallDurationSelected(){  return callDurationSelected; }
+    /****************************************/
+        public void onChange(ActionEvent event){
+            callDuration = callDurationValue.getValue();
+            System.out.println("5654+6546565465");
+        }
+    /****************************************/
+
+    public void onClickAddClient( ) throws InterruptedException {
+        callDuration = callDurationValue.getValue();
+        new Thread(new Client(callDuration)).start();
+    }
+
+    ////// hello hadi bach yedekhlo 5 clients
+    public void onClick5AddClient( ) throws InterruptedException {
+        callDuration =  callDurationValue.getValue();
+
+        for (int i = 0 ; i<=4 ; i++) {
+            new Thread(new Client( callDuration)).start();
+        }
+    }
+    public void onClickAddClientRandomTime( ) throws InterruptedException {
+
+        Random random = new Random();
+        for (int i = 0 ; i<=random.nextInt(10) ; i++) {
+            callDuration = 10 + random.nextInt(50);
+            new Thread(new Client(callDuration)).start();
+        }
+    }
+
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+
+        int pointYBottomCabin = 577;                                     int pointYTopCabin = 422;
+
+                                            int pointX1Cabin = 99;
+        img0.setLayoutX(pointX1Cabin);                                   img8.setLayoutX(pointX1Cabin);
+        img0.setLayoutY(pointYBottomCabin);                              img8.setLayoutY(pointYTopCabin);
+
+        img1.setLayoutX(pointX1Cabin);                                   img9.setLayoutX(pointX1Cabin);
+        img1.setLayoutY(pointYBottomCabin);                              img9.setLayoutY(pointYTopCabin);
+
+
+                                             int pointX2Cabin = 292;
+        img2.setLayoutX(pointX2Cabin);                                   img10.setLayoutX(pointX2Cabin);
+        img2.setLayoutY(pointYBottomCabin);                              img10.setLayoutY(pointYTopCabin);
+
+        img3.setLayoutX(pointX2Cabin);                                   img11.setLayoutX(pointX2Cabin);
+        img3.setLayoutY(pointYBottomCabin);                              img11.setLayoutY(pointYTopCabin);
+
+
+                                             int pointX3Cabin = 522;
+        img4.setLayoutX(pointX3Cabin);                                   img12.setLayoutX(pointX3Cabin);
+        img4.setLayoutY(pointYBottomCabin);                              img12.setLayoutY(pointYTopCabin);
+
+        img5.setLayoutX(pointX3Cabin);                                   img13.setLayoutX(pointX3Cabin);
+        img5.setLayoutY(pointYBottomCabin);                              img13.setLayoutY(pointYTopCabin);
+
+
+                                              int pointX4Cabin = 749;
+        img6.setLayoutX(pointX4Cabin);                                   img14.setLayoutX(pointX4Cabin);
+        img6.setLayoutY(pointYBottomCabin);                              img14.setLayoutY(pointYTopCabin);
+
+        img7.setLayoutX(pointX4Cabin);                                   img15.setLayoutX(pointX4Cabin);
+        img7.setLayoutY(pointYBottomCabin);                              img15.setLayoutY(pointYTopCabin);
+
+
+        Platform.runLater(()->Main.root.getChildren().add(img0 ));
+        Platform.runLater(()->Main.root.getChildren().add(img2 ));
+        Platform.runLater(()->Main.root.getChildren().add(img4 ));
+        Platform.runLater(()->Main.root.getChildren().add(img6 ));
+        Platform.runLater(()->Main.root.getChildren().add(img8 ));
+        Platform.runLater(()->Main.root.getChildren().add(img10));
+        Platform.runLater(()->Main.root.getChildren().add(img12));
+        Platform.runLater(()->Main.root.getChildren().add(img14));
+
+
+         img0.setOnMouseClicked( e -> changeCabineStatut(img0 ,img1  , 0 ));
+         img1.setOnMouseClicked( e -> changeCabineStatut(img0 ,img1  , 0 ));
+
+         img2.setOnMouseClicked( e -> changeCabineStatut(img2 ,img3  , 1 ));
+         img3.setOnMouseClicked( e -> changeCabineStatut(img2 ,img3  , 1 ));
+
+         img4.setOnMouseClicked( e -> changeCabineStatut(img4 ,img5  , 2 ));
+         img5.setOnMouseClicked( e -> changeCabineStatut(img4 ,img5  , 2 ));
+
+
+
+         img6.setOnMouseClicked( e -> changeCabineStatut(img6 ,img7  , 3 ));
+         img7.setOnMouseClicked( e -> changeCabineStatut(img6 ,img7  , 3 ));
+
+         img8.setOnMouseClicked( e -> changeCabineStatut(img8 ,img9  , 4 ));
+         img9.setOnMouseClicked( e -> changeCabineStatut(img8 ,img9  , 4 ));
+
+         img10.setOnMouseClicked(e -> changeCabineStatut(img10,img11 , 5 ));
+         img11.setOnMouseClicked(e -> changeCabineStatut(img10,img11 , 5 ));
+
+
+         img12.setOnMouseClicked(e -> changeCabineStatut(img12,img13 , 6 ));
+         img13.setOnMouseClicked(e -> changeCabineStatut(img12,img13 , 6 ));
+
+         img14.setOnMouseClicked(e -> changeCabineStatut(img14,img15 , 7 ));
+         img15.setOnMouseClicked(e -> changeCabineStatut(img14,img15 , 7 ));
+
+
+         int pointYBottomChair = 128;
+
+                    int pointXBottomChair = 31;
+
+                            img00.setLayoutX(pointXBottomChair);
+                            img00.setLayoutY(pointYBottomChair);
+
+                            img01.setLayoutX(pointXBottomChair);
+                            img01.setLayoutY(pointYBottomChair);
+
+        int pointYNormalChair = 38;
+
+                    int pointX1Chair = 131;
+                            img02.setLayoutX(pointX1Chair);
+                            img02.setLayoutY(pointYNormalChair);
+
+                            img03.setLayoutX(pointX1Chair);
+                            img03.setLayoutY(pointYNormalChair);
+
+                    int pointX2Chair = 268;
+                            img04.setLayoutX(pointX2Chair);
+                            img04.setLayoutY(pointYNormalChair);
+
+                            img05.setLayoutX(pointX2Chair);
+                            img05.setLayoutY(pointYNormalChair);
+
+                    int pointX3Chair = 402;
+                            img06.setLayoutX(pointX3Chair);
+                            img06.setLayoutY(pointYNormalChair);
+
+                            img07.setLayoutX(pointX3Chair);
+                            img07.setLayoutY(pointYNormalChair);
+
+                    int pointX4Chair = 532;
+                            img08.setLayoutX(pointX4Chair);
+                            img08.setLayoutY(pointYNormalChair);
+
+                            img09.setLayoutX(pointX4Chair);
+                            img09.setLayoutY(pointYNormalChair);
+
+
+        Platform.runLater(()->Main.root.getChildren().add(img00 ));
+        Platform.runLater(()->Main.root.getChildren().add(img02 ));
+        Platform.runLater(()->Main.root.getChildren().add(img04 ));
+        Platform.runLater(()->Main.root.getChildren().add(img06 ));
+        Platform.runLater(()->Main.root.getChildren().add(img08 ));
+
+        img00.setOnMouseClicked( e -> changeChaireStatut(img00 ,img01  , 0 ));
+        img01.setOnMouseClicked( e -> changeChaireStatut(img00 ,img01  , 0 ));
+
+        img02.setOnMouseClicked( e -> changeChaireStatut(img02 ,img03  , 1 ));
+        img03.setOnMouseClicked( e -> changeChaireStatut(img02 ,img03  , 1 ));
+
+        img04.setOnMouseClicked( e -> changeChaireStatut(img04 ,img05  , 2 ));
+        img05.setOnMouseClicked( e -> changeChaireStatut(img04 ,img05  , 2 ));
+
+
+        img06.setOnMouseClicked( e -> changeChaireStatut(img06 ,img07  , 3 ));
+        img07.setOnMouseClicked( e -> changeChaireStatut(img06 ,img07  , 3 ));
+
+        img08.setOnMouseClicked( e -> changeChaireStatut(img08 ,img09  , 4 ));
+        img09.setOnMouseClicked( e -> changeChaireStatut(img08 ,img09  , 4 ));
+
+    }
+
+
+}

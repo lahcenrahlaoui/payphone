@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1350.0" style="-fx-background-color: linear-gradient(to top right, #5433ff , #2f80ed , #20bdff, #56ccf2);" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+     <ImageView fx:id="cashier" cache="true" fitHeight="242.0" fitWidth="282.0" layoutX="978.0" layoutY="2.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/others/cashief.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="pane" layoutX="837.0" layoutY="431.0" prefHeight="269.0" prefWidth="521.0" style="-fx-background-color:  #FF3A3A; ">
+         <children>
+             <Spinner fx:id="callDurationValue" layoutX="208.0" layoutY="54.0" onInputMethodTextChanged="#onChange" prefHeight="42.0" prefWidth="105.0" style="-fx-body-color: ladder(skyblue,blue,cornflowerblue );">
+                <valueFactory>
+                   <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="20" max="60" min="10" />
+                </valueFactory>
+             </Spinner>
+             <Button fx:id="btnClientAdd5" layoutX="56.0" layoutY="54.0" mnemonicParsing="false" onAction="#onClick5AddClient" prefHeight="42.0" prefWidth="105.0" style="-fx-background-color: linear-gradient(to bottom right, #5433ff ,#56ccf2)" text="Add 5 Client" textAlignment="CENTER">
+                <font>
+                   <Font size="14.0" />
+                </font>
+             </Button>
+             <Button fx:id="btnClientAdd1" layoutX="365.0" layoutY="54.0" mnemonicParsing="false" onAction="#onClickAddClient" prefHeight="42.0" prefWidth="105.0" style="-fx-background-color: linear-gradient(to bottom right, #5433ff ,#56ccf2)" text="Add Client" textAlignment="CENTER">
+                <font>
+                   <Font size="14.0" />
+                </font>
+             </Button>
+             <Button fx:id="btnClientRandomTime" layoutX="208.0" layoutY="194.0" mnemonicParsing="false" onAction="#onClickAddClientRandomTime" prefHeight="42.0" prefWidth="105.0" style="-fx-background-color: linear-gradient(to bottom right, #5433ff ,#56ccf2)" text="Add" textAlignment="CENTER">
+                <font>
+                   <Font size="14.0" />
+                </font>
+             </Button>
+            <Text layoutX="113.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If You Want To Add Random Clients With Random Time Just Click To This Button " textAlignment="CENTER" wrappingWidth="295.9999994635582">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+
+   </children>
+
+ </AnchorPane>

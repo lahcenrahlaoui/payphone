@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="batik-transcoder-1.6-1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../batik-transcoder-1.6-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../batik-svg-dom-1.6-1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
