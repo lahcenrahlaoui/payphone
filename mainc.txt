@@ -19,7 +19,7 @@ import static sample.Controller.X;
 
 
 public class Main extends Application {
-// START DECLARATION
+//// START DECLARATION
 
     public static ImageView img1 = imgDisactiveCabine();
     public static ImageView img3 = imgDisactiveCabine();
