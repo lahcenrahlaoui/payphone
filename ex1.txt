@@ -21,7 +21,7 @@ import static sample.Main.*;
 
 public class Controller implements Initializable {
 
-
+// xml 
     @FXML
     AnchorPane anchorPane = new AnchorPane();
     ImageView cashier = new ImageView(new Image("@../images/others/cashief.png"));
