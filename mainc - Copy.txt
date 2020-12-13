@@ -1,0 +1,498 @@
+package sample;
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.concurrent.Semaphore;
+
+import static sample.Controller.X;
+
+
+public class Main extends Application {
+//// START DECLARATION
+
+    public static ImageView img1 = imgDisactiveCabine();
+    public static ImageView img3 = imgDisactiveCabine();
+    public static ImageView img5 = imgDisactiveCabine();
+    public static ImageView img7 = imgDisactiveCabine();
+    public static ImageView img9 = imgDisactiveCabine();
+    public static ImageView img11 = imgDisactiveCabine();
+    public static ImageView img13 = imgDisactiveCabine();
+    public static ImageView img15 = imgDisactiveCabine();
+
+    public static ImageView img2 =  imgActiveCabine();
+    public static ImageView img4 =  imgActiveCabine();
+    public static ImageView img6 =  imgActiveCabine();
+    public static ImageView img8 =  imgActiveCabine();
+    public static ImageView img10 = imgActiveCabine();
+    public static ImageView img12 = imgActiveCabine();
+    public static ImageView img14 = imgActiveCabine();
+    public static ImageView img16 = imgActiveCabine();
+
+
+    public static int j = 0 ;
+    public static int i = 0 ;
+    static CheckBox checkCabine0  = new CheckBox("0");
+    static CheckBox checkCabine1  = new CheckBox("1");
+    static CheckBox checkCabine2  = new CheckBox("2");
+    static CheckBox checkCabine3  = new CheckBox("3");
+    static CheckBox checkCabine4  = new CheckBox("4");
+    static CheckBox checkCabine5  = new CheckBox("5");
+    static CheckBox checkCabine6  = new CheckBox("6");
+    static CheckBox checkCabine7  = new CheckBox("7");
+    static CheckBox checkChair0  = new CheckBox("0");
+    static CheckBox checkChair1  = new CheckBox("1");
+    static CheckBox checkChair2  = new CheckBox("2");
+    static CheckBox checkChair3  = new CheckBox("3");
+    static CheckBox checkChair4  = new CheckBox("4");
+
+    Button forCabines = new Button("check cabine");
+    Button forChairs = new Button("check chair");
+ 
+    
+    public static int getJ() {
+        if (X[0]){
+            Main.cabine0.setnewfree(true);
+            Main.j++;
+        }
+        if (X[1]){
+            Main.cabine0.setnewfree(true);
+            Main.j++;
+        }
+        if (X[2]){
+            Main.cabine0.setnewfree(true);
+            Main.j++;
+        }
+        if (X[3]){
+            Main.cabine0.setnewfree(true);
+            Main.j++;
+        }
+        if (X[4]){
+            Main.cabine0.setnewfree(true);
+            Main.j++;
+        }
+        if (X[5]){
+            Main.cabine0.setnewfree(true);
+            Main.j++;
+        }
+        if (X[6]){
+            Main.cabine0.setnewfree(true);
+            Main.j++;
+        }
+        if (X[7]){
+            Main.cabine0.setnewfree(true);
+
+            Main.j++;
+        }
+        /*
+        if (checkCabine0.isSelected()){
+            Main.cabine0.setnewfree(true);
+            Main.j++;
+        }
+
+        if (checkCabine1.isSelected()){
+            Main.cabine1.setnewfree(true);
+            Main.j++;
+        }
+        if (checkCabine2.isSelected()){
+            Main.cabine2.setnewfree(true);
+            Main.j++;
+        }
+        if (checkCabine3.isSelected()){
+            Main.cabine3.setnewfree(true);
+            Main.j++;
+        }
+        if (checkCabine4.isSelected()){
+            Main.cabine4.setnewfree(true);
+            Main.j++;
+        }
+
+        if (checkCabine5.isSelected()){
+            Main.cabine5.setnewfree(true);
+            Main.j++;
+        }
+        if (checkCabine6.isSelected()){
+            Main.cabine6.setnewfree(true);
+            Main.j++;
+        }
+        if (checkCabine7.isSelected()){
+            Main.cabine7.setnewfree(true);
+            Main.j++;
+        }*/
+
+
+        Main.gettingCabin = new Semaphore(Main.j);
+        System.out.println("/////////////  "+Main.j);
+        return Main.j;
+    }
+
+    public static int getI() {
+        if (checkChair0.isSelected()) {
+            Main.chair0.setnewfree(true);
+            Main.i++;
+        }
+
+        if (checkChair1.isSelected()) {
+            Main.chair1.setnewfree(true);
+            Main.i++;
+        }
+        if (checkChair2.isSelected()) {
+            Main.chair2.setnewfree(true);
+            Main.i++;
+        }
+        if (checkChair3.isSelected()) {
+            Main.chair3.setnewfree(true);
+            Main.i++;
+        }
+        if (checkChair4.isSelected()) {
+            Main.chair4.setnewfree(true);
+            Main.i++;
+        }
+         Main.gettingWaitingSeat = new Semaphore(Main.i);
+        return Main.i;
+    }
+
+    public static int waiting = 0;
+    public static int calling = 0;
+
+   // public static int numberOfCabines = 4;
+
+   // public static int numberOfChairs  = 5 ;
+
+    public static final Point point1  = new Point(1450.0, 350);
+
+    public static final Point point2  = new Point(1200.0, 350);
+
+    public static final ArrayList<Point> cabinPoints = new ArrayList<>(
+            Arrays.asList(
+                new Point(90.0 , 610.0),
+                new Point(280.0, 610.0),
+                new Point(510.0, 610.0),
+                new Point(740.0, 610.0),
+                new Point(90.0 , 480.0),
+                new Point(280.0, 480.0),
+                new Point(510.0, 480.0),
+                new Point(740.0, 480.0)
+            )
+    );
+
+    public static final ArrayList<Point> waitPoints = new ArrayList<>(
+            Arrays.asList(
+                new Point(63.0 ,140),
+                new Point(165.0,48),
+                new Point(302.0,48),
+                new Point(435.0,48),
+                new Point(564.0,48)
+            )
+    );
+
+    public static Free cabine0 = new Free(0,false);
+    public static Free cabine1 = new Free(0,false);
+    public static Free cabine2 = new Free(0,false);
+    public static Free cabine3 = new Free(0,false);
+    public static Free cabine4 = new Free(0,false);
+    public static Free cabine5 = new Free(0,false);
+    public static Free cabine6 = new Free(0,false);
+    public static Free cabine7 = new Free(0,false);
+
+    public static  ArrayList<Free> freeCabin = new ArrayList<>(
+            Arrays.asList( cabine0 ,  cabine1,   cabine2 ,  cabine3 , cabine4 , cabine5 ,  cabine6 ,  cabine7 )
+    );
+
+    public static Free chair0 = new Free(0,false);
+    public static Free chair1 = new Free(0,false);
+    public static Free chair2 = new Free(0,false);
+    public static Free chair3 = new Free(0,false);
+    public static Free chair4 = new Free(0,false);
+
+     public static final ArrayList<Free> freeWait = new ArrayList<>(
+            Arrays.asList(chair0, chair1 , chair2 , chair3 , chair4 )
+    );
+
+    //////// hello    hadi ana zedtha bach ndir ta3 la chain .. chghol  mazal makhdemtha  ..
+    public static final ArrayList<Point> checkin = new ArrayList<>(
+            Arrays.asList(
+                    new Point(1220,200),
+                    new Point(1140,200),
+                    new Point(1060,200),
+                    new Point(1300,200),
+                    new Point(1060,100),
+                    new Point(1300,100)
+            )
+    );
+    public static final ArrayList<Free> checkwait = new ArrayList<>(
+            Arrays.asList(
+                    new Free(0,true),
+                    new Free(1,true),
+                    new Free(2,true),
+                    new Free(3,true),
+                    new Free(4,true),
+                    new Free(5,true)
+            )
+    );
+
+
+    public static final Semaphore p1 = new Semaphore(1);
+    public static final Semaphore p2 = new Semaphore(1);
+    public static final Semaphore p3 = new Semaphore(1);
+    public static final Semaphore waitC = new Semaphore(1);
+    public static final Semaphore callC = new Semaphore(1);
+    public static final Semaphore checkout = new Semaphore(6);
+    public static final Semaphore revenueS = new Semaphore(1);
+    public static final Semaphore entree = new Semaphore(1);
+
+    public static  Semaphore gettingWaitingSeat ;
+    public static final Semaphore getFreeWaitingSeat = new Semaphore(1);
+
+    public static Semaphore gettingCabin;
+    public static final Semaphore getCabin = new Semaphore(1);
+
+
+    public static Double revenueC = Double.valueOf(0);
+
+    public static Label revenueLabel = new Label();
+
+    public static AnchorPane root;
+
+
+// FIN DECLARATION
+
+// START METHOD START
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+
+        root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
+        primaryStage.setTitle("taxi_phone");
+
+        /*
+        revenueLabel.setText("0");
+        revenueLabel.setId("revenueLabel");
+
+        revenueLabel.setLayoutX(880.0);
+        revenueLabel.setLayoutY(430.0);
+
+        root.getChildren().add(revenueLabel);
+/*/
+        /*****************/
+        checkCabine0.setLayoutX(200);
+        checkCabine0.setLayoutY(300);
+        checkCabine1.setLayoutX(400);
+        checkCabine1.setLayoutY(300);
+        checkCabine2.setLayoutX(600);
+        checkCabine2.setLayoutY(300);
+        checkCabine3.setLayoutX(800);
+        checkCabine3.setLayoutY(300);
+        checkCabine4.setLayoutX(200);
+        checkCabine4.setLayoutY(200);
+        checkCabine5.setLayoutX(400);
+        checkCabine5.setLayoutY(200);
+        checkCabine6.setLayoutX(600);
+        checkCabine6.setLayoutY(200);
+        checkCabine7.setLayoutX(800);
+        checkCabine7.setLayoutY(200);
+   /////////*************************//////////
+
+        forCabines.setLayoutX(1000);
+        forCabines.setLayoutY(500);
+        forChairs.setLayoutX(1000);
+        forChairs.setLayoutY(600);
+
+        forCabines.setOnAction(e->{
+                cabine0.setnewfree(false);
+                cabine1.setnewfree(false);
+                cabine2.setnewfree(false);
+                cabine3.setnewfree(false);
+                cabine4.setnewfree(false);
+                cabine5.setnewfree(false);
+                cabine6.setnewfree(false);
+                cabine7.setnewfree(false);
+                Main.j=0;
+                getJ();
+        });
+
+      /*  c0.setOnAction(e->{
+            getJ();
+        });
+        c1.setOnAction(e->{
+            getJ();
+        });
+
+        c2.setOnAction(e->{
+            getJ();
+        });
+        c3.setOnAction(e->{
+            getJ();
+        });
+*/
+
+
+        forChairs.setOnAction(e->{
+            chair0.setnewfree(false);
+            chair1.setnewfree(false);
+            chair2.setnewfree(false);
+            chair3.setnewfree(false);
+            chair4.setnewfree(false);
+
+            Main.i=0;
+            getI();
+        });
+
+
+
+
+
+        root.getChildren().addAll(forChairs,checkChair0,checkChair1,checkChair2,checkChair3,checkChair4);
+
+        root.getChildren().addAll(forCabines,checkCabine0,checkCabine1,checkCabine2,checkCabine3,checkCabine4,checkCabine5,checkCabine6,checkCabine7);
+        Main.revenueLabel.setLayoutX(1100);
+        Main.revenueLabel.setLayoutY(22.4);
+
+
+        Platform.runLater(() -> {
+            Main.revenueLabel.setText(String.valueOf(Main.revenueC));
+            Main.root.getChildren().remove(Main.revenueLabel);
+            Main.root.getChildren().add(Main.revenueLabel);
+
+        });
+
+
+
+        primaryStage.setScene(new Scene(root, 1400, 700));
+        primaryStage.setResizable(true);
+        primaryStage.show();
+    }
+
+
+
+
+// FIN METHOD START
+
+// START MAIN
+    public static void main(String[] args) {
+        System.out.println(" place 0  r: ");
+        launch(args);
+
+    }
+
+
+// FIN MAIN
+
+    public static ImageView imgActiveCabine(){
+
+        Image image = new Image("sample/phone.png");
+        ImageView imageView = new ImageView(image);
+
+        imageView.setPreserveRatio(true);
+
+        imageView.setFitWidth(100);
+        imageView.setFitHeight(100);
+
+        return imageView;
+    }
+    public static ImageView imgDisactiveCabine(){
+
+        Image image = new Image("sample/disactivephone.png");
+        ImageView imageView = new ImageView(image);
+
+        imageView.setPreserveRatio(true);
+
+        imageView.setFitWidth(100);
+        imageView.setFitHeight(100);
+
+        return imageView;
+    }
+
+}
+
+
+
+
+
+
+// START POINT
+class Point{
+
+    private double X, Y;
+
+    public Point(double x, double y) {
+        X = x;
+        Y = y;
+        System.out.println(" place M  1 r : ");
+    }
+
+    public Point() {
+        X = 0.0;
+        Y = 0.0;
+    }
+
+    public double getX() {
+        System.out.println(" place M  10 r : ");
+        return X;
+    }
+
+    public Point setX(double x) {
+        System.out.println(" place M  6 : ");
+        X = x;
+        return this;
+    }
+
+    public double getY() {
+        System.out.println(" place M  11 r: ");
+        return Y;
+    }
+
+    public Point setY(double y) {
+        System.out.println(" place M  8 : ");
+        Y = y;
+        return this;
+    }
+
+}
+// FIN POINT
+
+// START FREE
+class Free{
+
+    private int index;
+
+    private boolean free;
+
+    public Free(int i, boolean f){
+         index = i;
+        free = f;
+    }
+    public void setnewfree(boolean f){
+        this.free = f;
+    }
+    public int getIndex() {
+        return index;
+    }
+
+    public Free setIndex(int index) {
+         this.index = index;
+        return this;
+    }
+
+    public boolean isFree() {
+         return free;
+    }
+
+    public Free setFree(boolean free) {
+     this.free = free;
+     return this;
+    }
+}
+// FIN FREE
+
+
