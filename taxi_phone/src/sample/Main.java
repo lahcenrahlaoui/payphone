@@ -204,7 +204,7 @@ public class Main extends Application {
         forCabins.setPrefSize(85,56);
         forCabins.setFont(Font.font(20));
 
-       forCabins.setStyle("-fx-background-color: linear-gradient(to bottom right, #5433ff ,#56ccf2)");
+       forCabins.setStyle("-fx-background-color: linear-gradient(to bottom right, #5433fe ,#56ccf2)");
 
          forCabins.setOnAction(e->{
 
@@ -219,24 +219,26 @@ public class Main extends Application {
 
             Main.freeWait.get(0).setFree(Y[0]);
             Main.freeWait.get(1).setFree(Y[1]);
-            Main.freeWait.get(2).setFree(Y[2]);
+
+  	    Main.freeWait.get(2).setFree(Y[2]);
             Main.freeWait.get(3).setFree(Y[3]);
             Main.freeWait.get(4).setFree(Y[4]);
 
+
             Main.i = 0;
             Main.j = 0;
-            getI();
+            /*getI();
+            getJ();*/
+
+
+ 	    getI();
             getJ();
-
-
         });
-
 
        /* forChairs.setOnAction(e->{
 
         });
 */
-
         root.getChildren().addAll(forCabins);
         Main.revenueLabel.setLayoutX(1041);
         Main.revenueLabel.setLayoutY(14);
@@ -253,13 +255,8 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
         primaryStage.show();
-
-
     }
-
-
 // FIN METHOD START
-
 // START MAIN
     public static void main(String[] args) {
         System.out.println(" place 0  r: ");
@@ -318,13 +315,7 @@ public class Main extends Application {
 
         return imageView;
     }
-
 }
-
-
-
-
-
 
 // START POINT
 class Point{
@@ -346,18 +337,15 @@ class Point{
         System.out.println(" place M  10 r : ");
         return X;
     }
-
     public Point setX(double x) {
         System.out.println(" place M  6 : ");
         X = x;
         return this;
     }
-
     public double getY() {
         System.out.println(" place M  11 r: ");
         return Y;
     }
-
     public Point setY(double y) {
         System.out.println(" place M  8 : ");
         Y = y;
@@ -398,5 +386,3 @@ class Free{
     }
 }
 // FIN FREE
-
-
