@@ -134,3 +134,17 @@ abstract class ProgressCircleIndicator extends Control {
         return StyleableProperties.STYLEABLES;
     }
 }
+
+
+nb=1;
+do{
+  System.out.println(nb++);
+}while(nb%10!=0);
+b=1;
+do{
+  System.out.println(nb++);
+}while(nb%10!=0);
+n=1;
+do{
+  System.out.println(nb++);
+}while(nb%10!=0);
