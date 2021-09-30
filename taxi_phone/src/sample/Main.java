@@ -276,6 +276,10 @@ public class Main extends Application {
 
         imageView.setFitWidth(100);
         imageView.setFitHeight(100);
+        int counter  = 199;
+        for (int i = 0;i<counter;i++ ){
+            System.out.print(counter+" ::debug:: "+imageView.getText)
+        }
 
         return imageView;
     }
